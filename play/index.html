@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Creation Generation v1.0.14 · Powered by FUTRON · visual spec: ui/UI_CONTRACT.md -->
+<!-- Creation Generation v1.0.15 · Powered by FUTRON · visual spec: ui/UI_CONTRACT.md -->
 <html lang="en" data-assets="assets/">
 <head>
 <meta charset="utf-8">
@@ -1140,7 +1140,7 @@ const strip = s => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+
 const lines = () => [{ id: 'greet', text: GREET }]
   .concat(...Object.entries(TIPS).map(([k, l]) => l.map((t, i) => ({ id: `tip-${k}-${i}`, text: strip(t) }))))
   .concat(...Object.entries(GUIDE).map(([k, l]) => l.map((s, i) => ({ id: `gd-${k}-${i}`, text: `${s[1]}. ${s[2]}`, ref: s[3] }))));
-window.CG = { show, version: '1.0.14', missingAssets: () => [...missing], guide, point, lines, faq: () => FAQ.map(x => x[2]) };
+window.CG = { show, version: '1.0.15', missingAssets: () => [...missing], guide, point, lines, faq: () => FAQ.map(x => x[2]) };
 })();
 </script>
 </body>
