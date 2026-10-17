@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creation Generation · Free creative studio for your AI chat</title>
+<meta name="description" content="Creation Generation is a free creative-studio console for any AI chat. Press Start in your browser, pick what you're making, and a crew of AI agents researches, designs and builds it with you.">
+<link rel="canonical" href="https://creationgeneration.site/">
+<link rel="icon" href="assets/logo-brush-c-small.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Creation Generation · Press Start">
+<meta property="og:description" content="A free creative studio that runs inside your AI chat. Films, music videos, anime, games, brands and more.">
+<meta property="og:image" content="https://creationgeneration.site/assets/og.jpg">
+<meta property="og:url" content="https://creationgeneration.site/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0B10">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Press+Start+2P&family=Saira:wght@400;600;800&display=swap" rel="stylesheet">
+<!-- AD SCRIPT: added only after AdSense approves this site. Never on /play (the console stays ad-free and tracker-free). -->
+<style>
+:root{--ink:#0B0B10;--paper:#F4F1E8;--pink:#FF2E9A;--purple:#8B3DFF;--teal:#13E0C0;--cyan:#00E5FF;--yellow:#F9DA17;--orange:#FF8A1E;--blue:#1E8BFF;
+  --f-d:"Bangers",Impact,system-ui,sans-serif;--f-n:"Anton",Impact,sans-serif;--f-u:"Saira",system-ui,-apple-system,"Segoe UI",sans-serif;--f-p:"Press Start 2P",ui-monospace,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ink);color:#fff;font:400 16px/1.55 var(--f-u)}
+body{background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.6px) 0 0/14px 14px,linear-gradient(160deg,#1a0838 0,#0B0B10 55%,#06121a 100%);min-height:100vh}
+a{color:var(--cyan)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:3px solid var(--yellow)}
+header img{height:38px;width:auto;display:block}
+header nav{display:flex;gap:10px}
+.chip{display:inline-block;padding:7px 12px;border:3px solid #000;background:var(--paper);color:var(--ink);font:800 12px var(--f-u);letter-spacing:.06em;text-decoration:none;transform:skewX(-8deg);box-shadow:4px 4px 0 #000;white-space:nowrap}
+.chip:hover,.chip:focus-visible{background:var(--pink);outline:0}
+.hero{display:grid;gap:22px;padding:28px 0 8px;text-align:center}
+.hero h1{margin:0;font:clamp(40px,8vw,84px)/.9 var(--f-d);letter-spacing:1px;color:var(--yellow);-webkit-text-stroke:2px #000;text-shadow:5px 5px 0 var(--pink);transform:rotate(-1.5deg)}
+.hero p.lead{margin:0 auto;max-width:640px;font:600 clamp(16px,2.4vw,19px)/1.5 var(--f-u)}
+.shot{display:block;width:100%;max-width:920px;margin:0 auto;border:5px solid #000;box-shadow:8px 8px 0 var(--pink);aspect-ratio:1672/941;object-fit:cover;background:#1a0838}
+.start{display:inline-flex;align-items:center;justify-content:center;gap:14px;justify-self:center;padding:18px 40px;background:var(--yellow);color:#000;border:5px solid #000;box-shadow:8px 8px 0 var(--pink);transform:skewX(-8deg);font:clamp(30px,6vw,46px)/1 var(--f-d);letter-spacing:2px;text-decoration:none}
+.start:hover,.start:focus-visible{transform:skewX(-8deg) translateY(-3px);box-shadow:11px 11px 0 var(--pink);outline:0}
+.start i{font-style:normal;font-size:.8em}
+.free{margin:0;font:800 12px var(--f-u);letter-spacing:.18em;color:var(--teal)}
+section{padding:40px 0 8px}
+h2{margin:0 0 16px;font:clamp(30px,5vw,44px)/1 var(--f-d);letter-spacing:1px;color:var(--yellow);-webkit-text-stroke:1px #000;text-shadow:3px 3px 0 #000}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:18px;background:rgba(10,4,26,.85);border:3px solid var(--yellow);box-shadow:6px 6px 0 #000}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;margin-bottom:10px;background:var(--pink);color:#000;border:3px solid #000;font:22px var(--f-n)}
+.steps b{display:block;font:24px var(--f-d);letter-spacing:1px;color:#fff;margin-bottom:4px}
+.fmts{display:flex;flex-wrap:wrap;gap:9px}
+.fmts span{padding:6px 11px;border:3px solid #000;background:#efe7ff;color:#2a0b63;font:800 12px var(--f-u);letter-spacing:.04em;transform:skewX(-8deg);box-shadow:3px 3px 0 #000}
+.modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mode{padding:16px;border:3px solid #000;color:#000;transform:skewX(-4deg);box-shadow:6px 6px 0 #000}
+.mode b{display:block;font:28px var(--f-d);letter-spacing:1px}.mode span{font:700 14px/1.4 var(--f-u)}
+.m1{background:var(--teal)}.m2{background:var(--yellow)}.m3{background:var(--pink)}
+.get{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding:20px;background:rgba(10,4,26,.85);border:3px solid var(--teal);box-shadow:6px 6px 0 #000}
+.get img{width:120px;height:120px;border-radius:50%;border:4px solid #000;background:var(--teal);object-fit:cover;object-position:55% 0}
+.get p{margin:0 0 12px}
+.dl{display:inline-block;padding:12px 20px;background:var(--teal);color:#000;border:3px solid #000;box-shadow:5px 5px 0 var(--pink);font:800 15px var(--f-u);letter-spacing:.05em;text-decoration:none;transform:skewX(-8deg)}
+code{font:12px var(--f-p);background:#000;color:var(--yellow);padding:2px 6px;word-break:break-all}
+details{margin:0 0 10px;padding:12px 16px;background:rgba(10,4,26,.85);border:3px solid #000;box-shadow:4px 4px 0 var(--purple)}
+summary{cursor:pointer;font:800 16px var(--f-u)}
+details p{margin:10px 0 0}
+footer{margin-top:48px;padding:22px 0 40px;border-top:3px solid var(--pink);display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;font:600 13px var(--f-u);color:#cfc8e8}
+footer a{color:#fff}
+@media (max-width:760px){.steps,.modes{grid-template-columns:1fr}.get{grid-template-columns:1fr;text-align:center}.get img{margin:0 auto}header img{height:30px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a href="./" aria-label="Creation Generation home"><img src="assets/wordmark-white.webp" alt="Creation Generation" width="1400" height="430"></a>
+  <nav><a class="chip" href="play/">PLAY</a><a class="chip" href="https://github.com/CreationGeneration/CreationGeneration.github.io/releases/latest">DOWNLOAD</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>Creation Generation</h1>
+  <p class="lead">A free creative studio that runs inside your AI chat. You direct. A crew of AI agents researches, designs, generates and checks the work with you.</p>
+  <a href="play/"><img class="shot" src="assets/title-hero.webp" alt="The Creation Generation title screen: two versions of AVANI beside the Start Project, AI Character Modes and Content Tools menu" width="1672" height="941"></a>
+  <a class="start" href="play/">▶ PRESS START <i>🎮</i></a>
+  <p class="free">FREE · NO SIGN-IN · RUNS IN YOUR BROWSER · v1.0.11</p>
+</div>
+
+<!-- AD SLOT lobby-1 (after AdSense approval): keep at least 150 px away from PRESS START; never inside the console. -->
+
+<section aria-labelledby="how">
+  <h2 id="how">How it works</h2>
+  <ol class="steps">
+    <li><b>Press Start</b>Open the console here, or drop the cartridge zip into ChatGPT, Gemini, Claude or any AI chat and type <code>play</code>.</li>
+    <li><b>Pick your project</b>Seven quick steps: format, story, cast, look, crew, budget, confirm. Everything you choose becomes canon for your story bible.</li>
+    <li><b>Send it to the chat</b>The console hands your choices to the chat in one command. AVANI and the crew take it from there and ask for your approval before anything is made.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="modes">
+  <h2 id="modes">Three ways to create</h2>
+  <div class="modes">
+    <div class="mode m1"><b>EASY</b><span>Auto-pilot. AVANI researches, decides and builds; you approve the finished package once.</span></div>
+    <div class="mode m2"><b>HYBRID</b><span>Co-create. A/B options and an approval gate at every stage.</span></div>
+    <div class="mode m3"><b>DIRECTOR</b><span>Full control. Every lens, layer, swatch and line is yours to set.</span></div>
+  </div>
+</section>
+
+<section aria-labelledby="make">
+  <h2 id="make">What you can make</h2>
+  <div class="fmts"><span>FILM TRAILER</span><span>SERIES EPISODE</span><span>MUSIC VIDEO</span><span>SHORT REEL</span><span>ANIME</span><span>COMMERCIAL</span><span>PODCAST</span><span>GAME</span><span>APP · WEBSITE</span><span>UI · UX</span><span>FASHION COLLECTION</span><span>TECH PACK</span><span>PRODUCT</span><span>ARCHITECTURE · DECOR</span><span>BRAND KIT</span><span>COMIC · MANGA</span><span>BOOK · AUDIOBOOK</span><span>REVERSE-ENGINEER</span></div>
+</section>
+
+<!-- AD SLOT lobby-2 (after AdSense approval) -->
+
+<section aria-labelledby="get">
+  <h2 id="get">Use it in your AI chat</h2>
+  <div class="get">
+    <img src="assets/avani-guide.webp" alt="AVANI, your guide" width="240" height="240">
+    <div>
+      <p>The cartridge is a signed zip of plain text and HTML: no installs, no accounts, no tracking. Upload it to your AI chat and type <code>play</code>. Every release is verified: run <code>python3 tools/shield.py verify</code> and it must say GENUINE with key <code>CG-44A1-4E8D-5E85-976F-F20E</code>.</p>
+      <a class="dl" href="https://github.com/CreationGeneration/CreationGeneration.github.io/releases/latest">⬇ GET THE LATEST CARTRIDGE</a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq">
+  <h2 id="faq">Questions</h2>
+  <details><summary>Does it cost money?</summary><p>No. The cartridge is free, and the spend cap starts at $0, so only free tools run. Anything paid shows a quote and waits for your yes.</p></details>
+  <details><summary>Do I need to code?</summary><p>No. Everything works in a normal AI chat. If your chat app can run code, the built-in quality checks run for real.</p></details>
+  <details><summary>Do I have to type commands?</summary><p>No. The console builds the command for you. Press Send, paste it in your chat and press Enter. AVANI carries on from there.</p></details>
+  <details><summary>Can I bring my own scripts, chats and art?</summary><p>Yes. Choose From Existing (or type <code>/import</code>). Your words stay word for word, and anything that conflicts is flagged for you.</p></details>
+  <details><summary>How do I continue tomorrow, or in another app?</summary><p>Type <code>/save</code> and keep the block it prints. In any new chat, load the cartridge, type <code>/load</code> and paste the block.</p></details>
+  <details><summary>Is my work private?</summary><p>The console runs in your browser. Files you pick are listed by name, type and size only and are never uploaded. Your work lives in your own AI chat. See the <a href="privacy/">privacy policy</a>.</p></details>
+</section>
+</main>
+
+<footer>
+  <span>© Creation Generation · Powered by FUTRON</span>
+  <a href="play/">Play</a>
+  <a href="https://github.com/CreationGeneration/CreationGeneration.github.io/releases/latest">Downloads</a>
+  <a href="privacy/">Privacy</a>
+  <a href="https://github.com/CreationGeneration/CreationGeneration.github.io/issues">Contact</a>
+</footer>
+</div>
+</body>
+</html>
